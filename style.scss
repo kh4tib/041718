@@ -30,6 +30,8 @@ body {
     }
 }
 
+// Image Styles
+
 .content {
     &__image {
         grid-area: 1 / 2 / 4 / 3;
@@ -81,6 +83,8 @@ body {
             }
         }
     }
+
+// Details Styles
 
     &__details {
         grid-area: 2 / 1 / 3 / 2;
@@ -159,4 +163,45 @@ body {
             
         }
     }
+
+// Nav Styles
+
+    &__header {
+        grid-area: 1 / 2 / 2 / 3;
+        z-index: 2;
+        display: flex;
+        align-items: flex-end;;
+        justify-content: center;
+
+        nav {
+            a {
+                margin: 1rem;
+                text-decoration: none;
+                color: #fff;
+                transition: 300ms ease-in-out;
+
+                &:hover {
+                    color: #161616;
+                }
+            }
+        }
+    }
+
+// Logo Styles
+
+    &__logo {
+        grid-area: 1 / 1 / 2 / 3 ;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        margin-left: 8rem;
+
+        svg {
+            width: 8rem;
+            height: auto;
+            fill: #fff;
+        }
+    }
 }
+
+

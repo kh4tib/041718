@@ -103,5 +103,28 @@ body {
         left: -50%;
         z-index: -1;
         transition: 300ms ease-in-out; }
+.content__header {
+  grid-area: 1 / 2 / 2 / 3;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center; }
+  .content__header nav a {
+    margin: 1rem;
+    text-decoration: none;
+    color: #fff;
+    transition: 300ms ease-in-out; }
+    .content__header nav a:hover {
+      color: #161616; }
+.content__logo {
+  grid-area: 1/1/2/3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-left: 8rem; }
+  .content__logo svg {
+    width: 8rem;
+    height: auto;
+    fill: #fff; }
 
 /*# sourceMappingURL=style.css.map */
