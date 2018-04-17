@@ -10,7 +10,7 @@ html,
 body {
     width: 100%;
     height: 100%;
-    background: #161616;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 // Main Styles
@@ -19,6 +19,7 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
+    background: #161616;
 
     &__content {
         width: 100%;
@@ -38,7 +39,8 @@ body {
             &__oval {
                 width: 200%;
                 height: 200%;
-                background: blueviolet;
+                // background: blueviolet;
+                border: 1rem solid #161616;
                 border-radius: 100%;
                 position: relative;
                 top: -50%;
@@ -49,8 +51,10 @@ body {
 
                 .oval {
                     &__gradient {
-                        width: 200%;
-                        height: 200%;
+                        width: 100%;
+                        height: 100%;
+                        border: 1rem solid #161616;
+                        border-radius: 100%;
                         background-image: linear-gradient(273deg, #21D4FD 0%, #B721FF 100%);
                         animation: gradient__rotation 5s linear forwards infinite;
 
@@ -60,7 +64,7 @@ body {
                             }
 
                             100% {
-                                transform: rotate(360deg);
+                                transform: rotate(360deg);;
                             }
                         }
                     }
@@ -86,25 +90,69 @@ body {
         .details {
             &__container {
                 color: #fff;
-                margin-left: 4rem;
+                margin-left: 8rem;
 
                 .container {
                     &__title {
                         font-size: 4rem;    
-                        margin-bottom: 1rem;
+                        line-height: 4rem;
+                        font-weight: 700;
+                        width: 50%;
+                        margin-bottom: 2rem;
+                        text-transform: uppercase;
                     }
 
                     &__description {
                         font-size: 1rem;
+                        line-height: 1.5rem;
                         width: 50%;
-                        margin-bottom: 1rem;
+                        margin-bottom: 2rem;
                     }
 
                     &__button {
-                        width: 10rem;
-                        height: 2rem;
+                        width: 14rem;
+                        height: 4rem;
                         outline: none;
                         border: none;
+                        position: relative;
+                        z-index: 2;
+                        overflow: hidden;
+                        font-family: 'IBM Plex Mono', monospace;
+                        color: #fff;
+                        cursor: pointer;
+                        transition: 300ms ease-in-out;
+
+                        &:hover {
+                            .button__gradient {
+                                animation: button__gradient linear 5s forwards infinite;
+                                transition: 300ms ease-in-out;
+                            }
+
+                            @keyframes button__gradient {
+                                0% {
+                                    transform: rotate(0deg);
+                                    background-image: linear-gradient(273deg, darken( #21D4FD, 20% )0%, #B721FF 100%);
+                                }
+
+                                100% {
+                                    transform: rotate(360deg);
+                                    background-image: linear-gradient(273deg, darken( #21D4FD, 20% )0%, #B721FF 100%);
+                                }
+                            }
+                        }
+
+                        .button {
+                            &__gradient {
+                                width: 200%;
+                                height: 700%;
+                                background-image: linear-gradient(273deg, darken( #21D4FD, 0% ) 0%, #B721FF 100%);
+                                position: absolute;
+                                top: -350%;
+                                left: -50%; 
+                                z-index: -1;
+                                transition: 300ms ease-in-out;
+                            }
+                        }
                     }
                 }
             }
