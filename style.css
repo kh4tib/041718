@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #161616; }
+
+.main {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  .main__content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 5rem 1fr 5rem;
+    grid-template-columns: repeat(2, 1fr); }
+
+.content__image {
+  grid-area: 1 / 2 / 4 / 3;
+  overflow: hidden; }
+  .content__image .image__oval {
+    width: 200%;
+    height: 200%;
+    background: blueviolet;
+    border-radius: 100%;
+    position: relative;
+    top: -50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .content__image .image__oval .oval__gradient {
+      width: 200%;
+      height: 200%;
+      background-image: linear-gradient(273deg, #21D4FD 0%, #B721FF 100%);
+      animation: gradient__rotation 5s linear forwards infinite; }
+@keyframes gradient__rotation {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+    .content__image .image__oval .oval__image {
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      background: url(https://uploads-ssl.webflow.com/596a9d16d477b751b56b10a0/5abbfa151380e06559c3df39_hero-p-500.png) center center/50% no-repeat;
+      right: 940px; }
+
+/*# sourceMappingURL=style.css.map */
